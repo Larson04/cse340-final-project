@@ -1,0 +1,17 @@
+<%- include('../partials/header') %>
+
+    <h1>Car Catalog</h1>
+    <p>Browse our available cars and click on any category to see detailed information including 
+        available sections and instructors.</p>
+
+    <div class="car-list">
+        <% cars.values(cars).forEach(car => { %>
+            <div class="car-card">
+                <h3><a href="/catalog/<%= car.slug %>"><%= car.category %></a></h3>
+                <p class="category-id"><%= car.slug %> • <%= car. %></p>
+                <p class="car-description"><%= car.description %></p>
+            </div>
+        <% }); %>
+    </div>
+
+<%- include('../partials/footer') %>
